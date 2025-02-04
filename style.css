@@ -227,3 +227,55 @@ body {
     object-fit: cover;
   }
   
+  .header {
+    background-color: var(--white);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    padding-block: 12px;
+    z-index: 4;
+    transition: var(--transition-2);
+  }
+  
+  .header.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    filter: drop-shadow(var(--shadow-1));
+    transform: translateY(-100%);
+    transition: none;
+    animation: slideIn 0.5s ease forwards;
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: var(--ff-philosopher);
+    font-size: 4rem;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+  
+  .nav-toggle-btn {
+    font-size: 40px;
+    color: var(--charcoal);
+  }
+  
+  .nav-toggle-btn ion-icon { --ionicon-stroke-width: 20px; }
+  
+  .nav-toggle-btn.active .open,
+  .nav-toggle-btn .close { display: none; }
+  
+  .nav-toggle-btn .open,
+  .nav-toggle-btn.active .close { display: block; }
