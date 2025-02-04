@@ -37,3 +37,17 @@ const activeHeader = function () {
     header.classList.remove("active");
   }
 }
+
+ddEventOnelem(window, "scroll", activeHeader);
+
+const tabCard = document.querySelectorAll("[data-tab-card]");
+
+let lastTabCard = tabCard[0];
+
+const navigateTab = function () {
+  lastTabCard.classList.remove("active");
+  this.classList.add("active");
+  lastTabCard = this;
+}
+
+addEventOnelem(tabCard, "click", navigateTab);
