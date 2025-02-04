@@ -183,3 +183,47 @@ body {
   margin-inline: auto;
   margin-block-start: 30px;
 }
+
+.has-underline .has-before::before {
+    width: 18px;
+    height: 18px;
+    top: 2px;
+    left: 45%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--old-rose_30);
+    box-shadow: 7px -7px var(--old-rose_30);
+  }
+  
+  .btn {
+    padding: 12px 30px;
+    transition: var(--transition-1);
+  }
+  
+  .btn-primary {
+    background-color: var(--old-rose);
+    color: var(--white);
+  }
+  
+  .btn-primary:is(:hover, :focus) { background-color: var(--chinese-violet); }
+  
+  .btn-secondary {
+    border: 1px solid var(--old-rose);
+    color: var(--old-rose);
+  }
+  
+  .btn-secondary:is(:hover, :focus) {
+    background-color: var(--old-rose);
+    color: var(--white);
+  }
+  
+  .img-holder {
+    aspect-ratio: var(--width) / var(--height);
+    background-color: var(--light-gray);
+  }
+  
+  .img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
