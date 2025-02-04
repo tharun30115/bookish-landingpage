@@ -279,3 +279,33 @@ body {
   
   .nav-toggle-btn .open,
   .nav-toggle-btn.active .close { display: block; }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding-inline: 15px;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.25s var(--cubic-out);
+  }
+  
+  .navbar.active {
+    max-height: 300px;
+    visibility: visible;
+    transition-duration: 0.5s;
+  }
+  
+  .navbar-list { margin-block-end: 10px; }
+  
+  .navbar-link {
+    color: var(--charcoal);
+    padding-block: 8px;
+    line-height: 1.5;
+    transition: var(--transition-1);
+  }
+  
+  .navbar-link:is(:hover, :focus) { color: var(--old-rose); }
