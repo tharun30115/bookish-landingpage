@@ -627,3 +627,255 @@ body {
     box-shadow: none;
   }
   
+  .footer {
+    background-color: var(--seashell);
+    text-align: center;
+  }
+  
+  .footer-top {
+    padding-block: 50px;
+    border-block-end: 1px solid var(--chinese-violet_30);
+  }
+  
+  .footer .logo { margin-block-end: 15px; }
+  
+  .footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+  }
+  
+  .footer-link {
+    color: var(--charcoal);
+    transition: var(--transition-1);
+  }
+  
+  .footer-link:is(:hover, :focus) { color: var(--old-rose); }
+  
+  .footer-bottom { padding-block: 20px; }
+
+  @media (min-width: 575px) {
+
+  :root {
+
+    --fs-2: 4.5rem;
+    --fs-3: 3.5rem;
+    --fs-5: 2.5rem;
+
+  }
+
+
+  .container,
+  .header,
+  .navbar {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .section-text { --fs-7: 2rem; }
+
+
+  .header { top: 30px; }
+
+  .header.active { max-width: unset; }
+
+  .navbar {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+
+  .tab-card.active { height: 50vh; }
+
+
+  .achievement-card { display: flex; }
+
+  .achievement-card > * { width: 50%; }
+
+  .achievement-card .card-content { padding-block: 30px; }
+
+  .achievement-card .card-title { margin-block-end: 20px; }
+
+
+  .social-list-title { --fs-6: 2.2rem; }
+
+  .social-link {
+    font-size: 25px;
+    padding: 8px;
+  }
+
+}
+
+
+@media (min-width: 768px) {
+
+    :root {
+      --fs-2: 4.8rem;
+  
+    }
+  
+    .container,
+    .header,
+    .navbar { max-width: 720px; }
+  
+    .grid-list { grid-template-columns: 1fr 1fr; }
+  
+    .hero {
+      padding-block-start: calc(var(--section-padding) + 100px);
+      text-align: left;
+    }
+  
+    .hero .container {
+      grid-template-columns: 1fr 0.8fr;
+      align-items: center;
+    }
+  
+    .hero .section-subtitle { text-align: left; }
+  
+  
+    .benefits :is(.section-title, .section-text) { text-align: left; }
+  
+    .benefits-content { grid-column: 1 / 3; }
+
+    :is(.chapters, .pricing) .grid-list li:last-child {
+      grid-column: 1 / 3;
+      max-width: calc(50% - 12.5px);
+      width: 100%;
+      margin-inline: auto;
+    }
+
+    .tab-card.active { height: 70vh; }
+  
+  
+    .author .h2 { --fs-3: 4.2rem; }
+
+    .achievement-card { flex-direction: column; }
+  
+    .achievement-card > * { width: 100%; }
+  
+    .contact .wrapper { grid-template-columns: 1fr 1fr; }
+  
+  }
+
+
+  @media (min-width: 992px) {
+
+    :root {
+
+      --fs-2: 5.4rem;
+      --fs-3: 4rem;
+  
+    }
+  
+
+    .container,
+    .header,
+    .navbar { max-width: 960px; }
+  
+    .grid-list { grid-template-columns: repeat(3, 1fr); }
+  
+
+  
+    .header .container { padding-inline: 20px 30px; }
+  
+    .nav-toggle-btn { display: none; }
+  
+    .navbar,
+    .navbar.active { all: unset; }
+  
+    .navbar-list {
+      margin-block-end: 0;
+      display: flex;
+      gap: 30px;
+    }
+  
+
+    .benefits .grid-list {
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+    }
+  
+    .benefits-content { max-width: 80%; }
+
+    :is(.chapters, .pricing) .grid-list li:last-child { all: unset; }
+
+  
+    .tab-list {
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .tab-text {
+      text-orientation: upright;
+      white-space: nowrap;
+      writing-mode: vertical-lr;
+    }
+  
+    .tab-card {
+      height: 70vh;
+      max-width: 60px;
+    }
+  
+    .tab-card.active { max-width: 650px; }
+  
+
+    .author .container {
+      grid-template-columns: 0.6fr 1fr;
+      gap: 0;
+    }
+  
+    .author-content {
+      margin-block-start: 40px;
+      margin-inline-start: -30px;
+      padding-block-end: 70px;
+    }
+
+    .achievement .grid-list { grid-template-columns: 1fr 1fr; }
+  
+    .achievement-card { flex-direction: row; }
+  
+    .achievement-card > * { width: 50%; }
+
+    .contact .wrapper { grid-template-columns: 1fr 0.5fr; }
+  
+    .contact-form { padding: 40px; }
+  
+  }
+
+  @media (min-width: 1200px) {
+
+    :root {
+  
+
+      --fs-2: 6rem;
+      --fs-3: 4.5rem;
+      --fs-4: 3rem;
+      --fs-5: 3rem;
+  
+    }
+  
+
+    .container,
+    .header,
+    .navbar { max-width: 1140px; }
+  
+
+    .tab-card { max-width: 75px; }
+  
+    .tab-card.active { max-width: 750px; }
+  
+  
+    .author-content { padding: 85px 60px 115px; }
+  
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .footer .logo { margin-block-end: 0; }
+  
+  }
