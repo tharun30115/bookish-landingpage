@@ -476,7 +476,7 @@ body {
   }
   
   .tab-card.active .tab-text { display: none; }
-
+  
   .pricing-card {
     padding: 40px 50px;
     background-color: var(--white);
