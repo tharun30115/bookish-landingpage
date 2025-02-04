@@ -108,4 +108,78 @@ body {
   
   ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
   
-  
+  .container { padding-inline: 15px; }
+
+.section { padding-block: var(--section-padding); }
+
+.section:nth-child(odd) { background-color: var(--seashell); }
+
+.section-subtitle {
+  color: var(--old-rose);
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.h1,
+.h2,
+.h3,
+.tab-text {
+  color: var(--charcoal);
+  font-family: var(--ff-philosopher);
+  line-height: 1.2;
+}
+
+.h1 { font-size: var(--fs-2); }
+
+.h2 { font-size: var(--fs-3); }
+
+.h3 { font-size: var(--fs-5); }
+
+.section-text { font-size: var(--fs-7); }
+
+.w-100 { width: 100%; }
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+  content: "";
+  position: absolute;
+}
+
+.section-title { text-align: center; }
+
+.grid-list {
+  display: grid;
+  gap: 25px;
+}
+
+.btn-link {
+  color: var(--old-rose);
+  font-weight: var(--fw-500);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-1);
+}
+
+.btn-link:is(:hover, :focus) { color: var(--chinese-violet); }
+
+.has-underline {
+  position: relative;
+  margin-block-end: 60px;
+}
+
+.has-underline .span {
+  height: 2px;
+  background-color: var(--old-rose_30);
+  width: 200px;
+  margin-inline: auto;
+  margin-block-start: 30px;
+}
